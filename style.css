@@ -1,10 +1,25 @@
-body{
-  width: 1640PX;
-  margin: 20px;
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
 }
-h3{
-  margin: 5px 0px 5px;
-  height: 25px;
+ /* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after{
+  content: ''; content: none;
+}
+table {
+  border-collapse: collapse; border-spacing: 0;
 }
 a{
   text-decoration: none;
@@ -44,7 +59,7 @@ grid-template-columns: 1250px 1fr;
 display: grid;
 position: relative;
 padding: 0px;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(5, 20%);
 }
 .nav-b-content button{
 font-size: 12px;
@@ -54,12 +69,28 @@ background: white;
 border: 1px solid #FF785D;
 border-radius:0.5em;
 }
-.item{
+.nav-b-content button:hover{
+  color:white;
+  background-color: #B6523E;
+}
+.box-all .item{
 display: grid;
-width: 100%;
+top: 50%;
+left: 50%;
 align-items: center;
 }
-
+.sbox2-all .item{
+display: grid;
+top: 50%;
+left: 50%;
+align-items: center;
+}
+#conta .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .allbox{
   width: 1640px;
@@ -75,30 +106,37 @@ align-items: center;
 .box-all{
   width: 1340px;
   display: grid;
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: 100px 200px 200px 200px;
   grid-template-columns: repeat(4, 300px);
   }
 
 .box-1{
-  position: relative;
+  display: flex;
+  position: flex;
   padding: 5px;
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  height: 200px;
-  margin-left: -50%;
-  margin-top: -50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box-1:nth-child(1){
+  grid-column: span 4;
+}
+#cobaox{
+  background-color: #;
 }
 .box{
-  position: absolute;
+  display: flex;
+  position: relative;
   width: 200px;
-  height: 130px;
+  height: 130
   padding: 10px;
-  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #FFE2E2;
   grid-auto-rows: repeat(2, 15px 1fr);
 }
-  .box-1 ol a{
+.box-1 ol a{
   color: #C46363;
   padding-bottom: 5px;
 }
@@ -124,20 +162,6 @@ align-items: center;
   margin-left: -50%;
   margin-top: -50%;
 }
-.sub-t{
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-top: 30px;
-  padding-right: 10px;
-}
-.sub-t2{
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-top: 30px;
-  padding-right: 10px;
-  height: 35px;
-}
-
 
 #name{
   display: block;
@@ -152,10 +176,6 @@ align-items: center;
   width:200px;
   height: 25px;
   margin: 5px;
-}
-span{
-  text-align: center;
-  width: 90%;
 }
 ol{
   padding-left: 20px;
