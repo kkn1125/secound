@@ -29,6 +29,9 @@ a{
   .nav-all{
     background-color: white;
   }
+  .nav-title h1{
+    font-size: 25px;
+  }
 }
 
 .nav-all{
